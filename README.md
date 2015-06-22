@@ -7,7 +7,7 @@ Teaching blocks from 9:30-11am, 11:30am-1pm, 2:30-3:30pm and 4-5:30pm. There
 will be coffee breaks at 11 am and 3:30 pm and a 1 hour lunch break from 1-2
 pm.
 
-Installation:
+### Installation:
 
 Anaconda
 pandoc
@@ -27,7 +27,7 @@ IPython
 24, 25 and 26 June 2015
 At Southampton University, Boldrewood campus, 175/1025
 
-Course content
+### Course content
 
 Python provides tools for interactive and parallel computing that are widely used in scientific computing. We will show some uses of IPython for scientific applications, focusing on exciting recent developments, web-based notebook with code, graphics, and rich HTML.
 
@@ -74,7 +74,7 @@ Day 3 wrap-up: Architecture
    6. embedding
    7. nbformat
 
-Software Requirements
+### Software Requirements
 
 Python 3.x
 IPython stable (version 3.1) installed with the notebook. It should be available through the usual distribution channel, such Anaconda.
@@ -82,15 +82,21 @@ Your favorite text editor.
 If you have trouble installing Anaconda, this blog entry may help.
 To install the packages required for this course and the Pandas course using Anaconda, create a suitable environment using
 
-conda create -n ngcm python=3 numpy scipy ipython ipython-notebook pandas matplotlib pyzmq tornado
+```bash
+conda create -n ngcm python=3 numpy scipy ipython ipython-notebook pandas matplotlib pyzmq tornado requests
+```
+
 Then, to use this environment, enter
 
+```bash
 source activate ngcm
-Checking your installation
+```
+
+### Checking your installation
 
 You can download and run this ipython-version-check.py script, and execute it using "python ipython-version-check.py" to check you have fulfilled the installation requirements.
 
-Required knowledge
+### Required knowledge
 
 Basic Python,
 some vague notion of html would be great.
