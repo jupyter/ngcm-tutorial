@@ -83,7 +83,7 @@ If you have trouble installing Anaconda, this blog entry may help.
 To install the packages required for this course and the Pandas course using Anaconda, create a suitable environment using
 
 ```bash
-conda create -n ngcm python=3 numpy scipy ipython ipython-notebook pandas matplotlib pyzmq tornado requests
+conda create -n ngcm python=3 numpy scipy ipython ipython-notebook ipython-qtconsole pandas matplotlib pyzmq tornado requests sympy scikit-image
 ```
 
 Then, to use this environment, enter
