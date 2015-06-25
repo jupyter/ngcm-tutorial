@@ -4,37 +4,34 @@ import matplotlib.pyplot as plt
 from skimage.io import imread
 from skimage import measure
 
-def plot_contours(img, dark, light, show=True):
+def plot_corners(img, corners, show=True):
     """Display the image and plot all contours found"""
     plt.imshow(img, cmap='gray')
-    
-    for n, contour in enumerate(dark):
-        plt.plot(contour[:, 1], contour[:, 0], c='r', linewidth=1)
-    
-    for n, contour in enumerate(light):
-        plt.plot(contour[:, 1], contour[:, 0], c='b', linewidth=1)
-
+    plt.plot(corners[:,1], corners[:,0], 'r+', markeredgewidth=1.5, markersize=8) # Plot corners
     plt.axis('image')
     plt.xticks([])
     plt.yticks([])
     if show:
         plt.show()
 
-def find_contours(path, low=0.1, high=0.8):
-    """Find contours in an image at path
+def find_corners(path, min_distance=5):
+    """Find corners in an image at path
+    
+    Returns the image and the corner lists.
     """
     img = imread(path, flatten=True)
-    
-    # Find contours at a constant value of 0.1 and 0.8
-    dark = measure.find_contours(img, low)
-    light = measure.find_contours(img, high)
-    return img, dark, light
+    corners = corner_peaks(corner_harris(img), min_distance=min_distance)
+    return img, corners
 
-def get_contours_image(path):
+def get_corners_image(path):
+    """Given a path, return a PNG of the image with contour lines
+    
+    Calls both find_contours and plot_contours
+    """
     from IPython.core.pylabtools import print_figure
     
-    img, dark, light = find_contours(path)
-    plot_contours(img, dark, light, show=False)
+    img, corners = find_corners(path)
+    plot_corners(img, corners, show=False)
     fig = plt.gcf()
     pngdata = print_figure(fig)
     plt.close(fig)
