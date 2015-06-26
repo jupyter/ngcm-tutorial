@@ -61,6 +61,7 @@ Day 3: Parallel computing with IPython
 -   If you have trouble installing Anaconda, [this blog
     entry](http://www.southampton.ac.uk/~fangohr/blog/installation-of-python-spyder-numpy-sympy-scipy-pytest-matplotlib-via-anaconda.html)
     may help.
+-   For the material related to `nbconvert`, the `pandoc` package, together with a  `latex` installation, would be useful.
 
 To install the packages required for this course and the Pandas course
 using Anaconda, create a suitable environment using
