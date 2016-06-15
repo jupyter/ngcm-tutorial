@@ -3,27 +3,25 @@
 Materials for the IPython/Jupyter workshop at the Next-Generation Computational
 Modeling Summer Academy:
 
--   3-day course
--   24, 25 and 26 June 2015
+-   2-day course
+-   21 and 22 June 2016
 -   At Southampton University, Boldrewood campus, 175/1025
 
 Course URL: http://ngcm.soton.ac.uk/summer-academy/ipython.html
 
-Teaching blocks from 9:30-11am, 11:30am-1pm, 2:30-3:30pm and 4-5:30pm. There
-will be coffee breaks at 11 am and 3:30 pm and a 1 hour lunch break from 1-2
-pm.
+Teaching is from 10am to 6pm, broken up by half-hour tea breaks morning and
+afternoon, and an hour lunch break. See
+[the programme](http://ngcm.soton.ac.uk/summer-academy/programme.html) for
+details.
 
 ## Course content
 
-Python provides tools for interactive and parallel computing that are
+Jupyter and IPython provide tools for interactive and parallel computing that are
 widely used in scientific computing. We will show some uses of IPython
 for scientific applications, focusing on exciting recent developments,
-web-based notebook with code, graphics, and rich HTML.
+web-based notebooks with code, graphics, and rich HTML.
 
-In this advance tutorial we will mostly focus on the notebook format and
-capability of the IPython web notebook.
-
-Day 1: Core IPython
+Day 1: Core Jupyter and IPython
 
 -   Notebook Basics
 -   IPython - beyond plain python
@@ -32,17 +30,17 @@ Day 1: Core IPython
 -   Introduction to Interactive Javascript Widgets
 -   Customizing IPython - a condensed version
 
-Day 2: Interactivity and the Jupyter project
+Day 2 morning: Interactivity and the Jupyter project
 
 -   The architecture of interactive widgets
 -   Developing custom widgets
 -   Notebooks as documents: sharing and converting them
 -   Beyond Python: the Jupyter architecture with Julia and R
--   The Jupyter Hub: multiuser Jupyter environments
+-   JupyterHub: multiuser Jupyter environments
 
-Day 3: Parallel computing with IPython
+Day 2 afternoon: Parallel computing with IPython
 
--   Overview of the IPython.parallel model
+-   Overview of the ipyparallel model
 -   Controller and engines
 -   Basics of remote execution
 -   Direct vs task execution
@@ -54,8 +52,8 @@ Day 3: Parallel computing with IPython
 ## Software Requirements
 
 -   Python 3.x
--   IPython stable (version 3.1) installed with the notebook. It should
-    be available through the usual distribution channel, such
+-   Jupyter, including the Notebook and IPython. It should
+    be available through the usual distribution channels, such as
     [Anaconda](http://continuum.io/downloads).
 -   Your favorite text editor.
 -   If you have trouble installing Anaconda, [this blog
@@ -64,23 +62,25 @@ Day 3: Parallel computing with IPython
 -   For the material related to `nbconvert`, the `pandoc` package, together with a  `latex` installation, would be useful.
 
 To install the packages required for this course and the Pandas course
-using Anaconda, create a suitable environment using
+in a new environment with Anaconda, run:
 
 ```bash
-conda create -n ngcm python=3 numpy scipy ipython ipython-notebook ipython-qtconsole pandas matplotlib pyzmq tornado requests scikit-image sympy
+conda create -n ngcm python=3 numpy scipy jupyter ipywidgets pandas matplotlib requests scikit-image sympy
 ```
 
-Then, to use this environment, enter
+Then, to use this environment, enter:
 
-```python
+```bash
 source activate ngcm
 ```
+
+On Windows, this command is just `activate ngcm`.
 
 ## Checking your installation
 
 You can download and run this
-[ipython-version-check.py](http://www.southampton.ac.uk/~fangohr/teaching/summeracademy/2015/ipython-version-check.py)
-script, and execute it using "python ipython-version-check.py" to check
+[version_check.py](https://github.com/jupyter/ngcm-tutorial/raw/master/version_check.py)
+script, and execute it using `python version_check.py` to check
 you have fulfilled the installation requirements.
 
 
@@ -92,14 +92,11 @@ you have fulfilled the installation requirements.
 
 ## The trainers
 
--   [Ian Hawke](http://cmg.soton.ac.uk/people/ih3/)
+-   [Thomas Kluyver](http://cmg.soton.ac.uk/people/tk2e15/)
 -   [MinRK](http://github.com/minrk)
-
-Demonstrators: [Max Albert](http://cmg.soton.ac.uk/people/mha2e09/),
-[Josh Greenhalgh (NGCM)](http://cmg.soton.ac.uk/people/jdg1g14/)
 
 
 ## Infrastructure
 
--   [Etherpad IPython](https://etherpad.mozilla.org/YWve9erzYX)
--   [Slack channel "ipython"](https://ngcmsummeracademy2015.slack.com/messages/ipython/)
+-   [Etherpad](https://public.etherpad-mozilla.org/p/ngcm-2016-jupyter)
+-   [Slack channel "ipython"](https://ngcmsummeracademy2016.slack.com/messages/ipython/)
