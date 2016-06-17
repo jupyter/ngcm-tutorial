@@ -1,4 +1,4 @@
-from IPython import parallel
+import ipyparallel as parallel
 
 def remote_iterator(view, name):
     """Return an iterator on an object living on a remote engine."""
