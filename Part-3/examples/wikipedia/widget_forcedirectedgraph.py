@@ -1,5 +1,5 @@
-from IPython.html import widgets # Widget definitions
-from IPython.utils.traitlets import Unicode, CInt, CFloat # Import the base Widget class and the traitlets Unicode class.
+import ipywidgets as widgets # Widget definitions
+from traitlets import Unicode, CInt, CFloat # Import the base Widget class and the traitlets Unicode class.
 from IPython.display import display, Javascript
 
 def publish_js():
@@ -9,13 +9,13 @@ def publish_js():
 
 # Define our ForceDirectedGraphWidget and its target model and default view.
 class ForceDirectedGraphWidget(widgets.DOMWidget):
-    _view_name = Unicode('D3ForceDirectedGraphView', sync=True)
+    _view_name = Unicode('D3ForceDirectedGraphView').tag(sync=True)
     
-    width = CInt(400, sync=True)
-    height = CInt(300, sync=True)
-    charge = CFloat(270., sync=True)
-    distance = CInt(30., sync=True)
-    strength = CInt(0.3, sync=True)
+    width = CInt(400).tag(sync=True)
+    height = CInt(300).tag(sync=True)
+    charge = CFloat(270.).tag(sync=True)
+    distance = CInt(30.).tag(sync=True)
+    strength = CInt(0.3).tag(sync=True)
     
     def __init__(self, eventful_graph, *pargs, **kwargs):
         widgets.DOMWidget.__init__(self, *pargs, **kwargs)
