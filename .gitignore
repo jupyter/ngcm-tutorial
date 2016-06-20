@@ -1,4 +1,5 @@
 .ipynb_checkpoints
-Day-3/images
-Day-3/examples/*.txt
-Day-3/examples/gutenberg*
+Part-3/images
+Part-3/examples/*.txt
+Part-3/examples/gutenberg*
+__pycache__
