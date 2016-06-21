@@ -1,4 +1,4 @@
-#Station  Lat    Long   Elev 
+station	lat	long	elev
 BIRA	26.4840	87.2670	0.0120
 BUNG	27.8771	85.8909	1.1910
 GAIG	26.8380	86.6318	0.1660
