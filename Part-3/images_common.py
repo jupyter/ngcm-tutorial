@@ -2,7 +2,6 @@ import os
 import matplotlib.pyplot as plt
 
 from skimage.io import imread
-from skimage import measure
 
 def plot_corners(img, corners, show=True):
     """Display the image and plot all contours found"""
@@ -19,6 +18,7 @@ def find_corners(path, min_distance=5):
     
     Returns the image and the corner lists.
     """
+    from skimage.feature import corner_harris, corner_peaks
     img = imread(path, flatten=True)
     corners = corner_peaks(corner_harris(img), min_distance=min_distance)
     return img, corners
