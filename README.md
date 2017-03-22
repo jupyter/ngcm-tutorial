@@ -4,8 +4,8 @@ Materials for the IPython/Jupyter workshop at the Next-Generation Computational
 Modeling Summer Academy:
 
 -   2-day course
--   21 and 22 June 2016
--   At Southampton University, Boldrewood campus, 175/1025
+-   27 and 28 June 2017
+-   At Southampton University, Boldrewood campus
 
 Course URL: http://ngcm.soton.ac.uk/summer-academy/ipython.html
 
@@ -21,22 +21,27 @@ widely used in scientific computing. We will show some uses of IPython
 for scientific applications, focusing on exciting recent developments,
 web-based notebooks with code, graphics, and rich HTML.
 
-Day 1: Core Jupyter and IPython
+Day 1 morning: Core Jupyter and IPython
 
 -   Notebook Basics
 -   IPython - beyond plain python
 -   Markdown Cells
 -   Rich Display System
--   Introduction to Interactive Javascript Widgets
--   Customizing IPython - a condensed version
-
-Day 2 morning: Interactivity and the Jupyter project
-
--   The architecture of interactive widgets
--   Developing custom widgets
--   Notebooks as documents: sharing and converting them
 -   Beyond Python: the Jupyter architecture with Julia and R
--   JupyterHub: multiuser Jupyter environments
+
+Day 1 afternoon: Working with notebook files
+
+-   Converting notebooks to other formats with nbconvert
+-   Using notebooks in version control, with git and nbdime
+-   Sharing notebooks online using nbviewer
+-   Notebooks in continuous integration with nbval
+
+Day 2 morning: Interactive widgets in notebooks
+
+-   Using interact() to explore a function
+-   Creating widgets manually and connecting them to Python functions
+-   Laying out widgets on the page
+-   The architecture of interactive widgets
 
 Day 2 afternoon: Parallel computing with IPython
 
@@ -98,5 +103,5 @@ you have fulfilled the installation requirements.
 
 ## Infrastructure
 
--   [Etherpad](https://public.etherpad-mozilla.org/p/ngcm-2016-jupyter)
+-   [Etherpad](https://public.etherpad-mozilla.org/p/ngcm-2017-jupyter)
 -   [Slack channel "ipython"](https://ngcmsummeracademy2016.slack.com/messages/ipython/)
