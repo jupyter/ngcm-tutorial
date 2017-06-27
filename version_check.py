@@ -15,7 +15,7 @@ assert notebook.version_info >= (4,2), "You need notebook >= 4.2"
 print("notebook version is {} -> okay".format(notebook.__version__))
 
 import ipywidgets
-assert 4 <= ipywidgets.version_info[0] < 5, "You need ipywidgets 4.x"
+assert 4 <= ipywidgets.version_info[0] < 6, "You need ipywidgets 4.x-5.x"
 print("ipywidgets version is {} -> okay".format(ipywidgets.__version__))
 
 import ipyparallel
