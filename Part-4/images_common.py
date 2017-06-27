@@ -47,3 +47,28 @@ def get_pictures(pictures_dir):
                 pictures.append(os.path.join(directory, fname))
     
     return pictures
+
+
+def find_blobs(img_path):
+    """Find the blobs in an image"""
+    from skimage.color import rgb2gray
+    from skimage.feature import blob_doh
+    from skimage.io import imread
+
+    image = imread(img_path)
+    image_gray = rgb2gray(image)
+    return image, blob_doh(image_gray, max_sigma=30, threshold=.01)
+
+
+def plot_blobs(image, blobs):
+    """Plot the blobs in an image"""
+    fig, ax = plt.subplots()
+    ax.grid(False)
+    ax.imshow(image, interpolation='nearest')
+    ax.set_xticks([])
+    ax.set_yticks([])
+    for blob in blobs:
+        y, x, r = blob
+        c = plt.Circle((x, y), r, color='r', linewidth=2, fill=False)
+        ax.add_patch(c)
+

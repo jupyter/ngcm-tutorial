@@ -1,5 +1,8 @@
 .ipynb_checkpoints
-Part-3/images
-Part-3/examples/*.txt
-Part-3/examples/gutenberg*
+Part-4/images
+Part-4/examples/*.txt
+Part-4/examples/gutenberg*
+Part-4/*.jpg
+Part-4/hubble-*x*
 __pycache__
+.DS_Store
